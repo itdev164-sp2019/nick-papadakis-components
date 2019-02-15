@@ -8,6 +8,7 @@ const StyledButton = styled(ButtonBase)`
   color: ${props => (props.variant === 'primary' ? 'black' : 'white')};
   border: solid 1px
     ${props => (props.variant === 'primary' ? 'black' : 'white')};
+  background-color: black;
 `;
 
 export const Button = props => <StyledButton {...props} />;
