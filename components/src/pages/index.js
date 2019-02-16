@@ -4,20 +4,22 @@ import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import Image from '../components/image';
 import SEO from '../components/seo';
-import { Button } from '../components/Element';
-import { Footer } from '../components/Element';
+import { Button, IconButton, Section, Main } from '../components/Element';
 import { Card } from 'rebass';
-import { Main } from '../components/Element';
+import { Search } from 'styled-icons/feather';
 
 const IndexPage = () => (
   <Layout>
     <SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
     <Main
+      flex
+      justifyContent='space-evenly'
       fontSize={5}
+      textTransform='uppercase'
       color='#ffffff'
       fontWeight='bold'
-      width={[1, 1, 1 / 2]}
       alignItems='center'
+      width={[1, 1]}
       px={4}
       py={4}
       my={10}
@@ -25,7 +27,9 @@ const IndexPage = () => (
       bg='#000000'
     >
       <Card
+        flex
         fontSize={6}
+        justifyContent='space-evenly'
         fontWeight='bold'
         width={1}
         px={4}
@@ -50,11 +54,14 @@ const IndexPage = () => (
       </Link>
     </Main>
 
-    <Footer p={4}>
+    <Section flex justifyContent='space-evenly' p={4}>
       <Link to='/page-2'>
-        <Button width={1}>Button Response</Button>
+        <Button varient='primary' width={1}>
+          Button Response
+        </Button>
       </Link>
-    </Footer>
+      <IconButton icon={<Search />} />
+    </Section>
   </Layout>
 );
 
