@@ -7,6 +7,7 @@ import SEO from '../components/seo';
 import { Button, IconButton, Section, Main } from '../components/Element';
 import { Card } from 'rebass';
 import { Search } from 'styled-icons/feather';
+import { SearchBar } from '../components/SearchBar';
 
 const IndexPage = () => (
   <Layout>
@@ -54,13 +55,15 @@ const IndexPage = () => (
       </Link>
     </Main>
 
-    <Section flex justifyContent='space-evenly' p={4}>
+    <Section flex justifyContent='space-evenly'>
       <Link to='/page-2'>
         <Button varient='primary' width={1}>
           Button Response
         </Button>
       </Link>
-      <IconButton icon={<Search />} />
+      <Button>
+        <IconButton icon={<Search />} />
+      </Button>
     </Section>
   </Layout>
 );
