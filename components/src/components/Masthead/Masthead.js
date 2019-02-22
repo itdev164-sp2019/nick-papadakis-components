@@ -19,7 +19,7 @@ export const Masthead = ({ height, siteTitle }) => {
         style={{
           color: 'white',
           textDecoration: 'none',
-          fontFamily: `Electrolize`
+          fontFamily: 'Electrolize'
         }}
       >
         {siteTitle}
