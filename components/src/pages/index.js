@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import Layout from '../components/layout';
-import Image from '../components/image';
-import SEO from '../components/seo';
+import Layout from '../layout/layout';
+import Image from '../gatsby-components/image';
+import SEO from '../gatsby-components/seo';
 import { Button, IconButton, Section, Main } from '../components/Element';
 import { Card } from 'rebass';
 import { Search } from 'styled-icons/feather';
