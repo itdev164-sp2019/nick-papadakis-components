@@ -8,7 +8,8 @@ const Outer = styled(Box)`
   width: 100%;
   background-color: #000;
   margin-bottom: 1.45rem;
-  text-align: center;
+  line-height: 70px;
+  font-size: 200%;
 `;
 
 export const Masthead = ({ height, siteTitle }) => {
