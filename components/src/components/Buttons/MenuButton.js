@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeConsumer } from 'styled-components';
-import { IconButton } from '../ELement';
+import { IconButton } from '../Element';
 
 export const MenuButton = props => (
   <ThemeConsumer>

@@ -1,2 +1,2 @@
-import { MenuButton } from './MenuButton';
-import { SearchButton } from './SearchButton';
+export { MenuButton } from './MenuButton';
+export { SearchButton } from './SearchButton';
