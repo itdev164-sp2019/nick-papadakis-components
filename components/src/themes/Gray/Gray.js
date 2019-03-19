@@ -7,12 +7,15 @@ const images = {
   mastheadImage
 };
 
+const breakpoints = [576, 768, 900];
+
 const icons = {
   Menu: <Menu />,
   Search: <Search />
 };
 
 const theme = {
+  breakpoints: [...breakpoints],
   space: [0, 4, 8, 16, 32, 128, 256, 512],
   lineHeights: {
     solid: 1,
@@ -48,6 +51,13 @@ const theme = {
       disabled: 'hsl(208, 13%, 75%)',
       hint: 'hsl(208, 13%, 75%)'
     }
+  },
+  media: {
+    sizes: {
+      desktop: breakpoints[2],
+      tablet: breakpoints[1],
+      phone: breakpoints[0]
+    }
   }
 };
 
@@ -58,10 +68,13 @@ const defaults = {
     textTransform: 'uppercase',
     letterSpacing: theme.letterSpacings.tracked
   },
+  link: {
+    textDecoration: 'none'
+  },
   masthead: {
     height: '100%',
     width: '100%',
-    background: theme.colors.primary.main,
+    background: theme.colors.primary.light,
     borderBottom: theme.borders[1],
     borderColor: darken(0.1, theme.colors.primary.main)
   },
@@ -74,8 +87,9 @@ const variants = {
   button: {
     primary: {
       ...defaults.button,
-      color: theme.colors.primary.main,
-      borderColor: theme.colors.primary.main
+      color: theme.colors.primary.dark,
+      borderColor: theme.colors.primary.main,
+      background: theme.colors.primary.contrastText
     },
     contrast: {
       ...defaults.button,
@@ -88,6 +102,16 @@ const variants = {
       color: theme.colors.primary.main
     },
     contrast: {
+      color: theme.colors.primary.contrastText
+    }
+  },
+  link: {
+    primary: {
+      ...defaults.link,
+      color: theme.colors.primary.main
+    },
+    contrast: {
+      ...defaults.link,
       color: theme.colors.primary.contrastText
     }
   },
