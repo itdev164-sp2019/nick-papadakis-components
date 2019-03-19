@@ -7,4 +7,5 @@ export * from './Image';
 export * from './Label';
 export * from './Link';
 export * from './Main';
+export * from './Nav';
 export * from './Section';

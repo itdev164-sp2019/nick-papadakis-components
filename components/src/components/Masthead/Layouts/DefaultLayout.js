@@ -1,14 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import {
-  Header,
-  Button,
-  Section,
-  Image,
-  BaseContainer,
-  Link
-} from '../../Element';
+import { Header, Button, Section, Image, Link, Nav } from '../../Element';
 import { MenuButton, SearchButton } from '../../Buttons';
 import { MediaQuery } from '../../MediaQuery';
 
@@ -24,8 +17,6 @@ Item.defaultProps = {
   my: 'auto',
   mr: 3
 };
-
-const Nav = props => <BaseContainer as='nav' {...props} />;
 
 export const DefaultLayout = ({ image }) => (
   <StyledHeader flex alignItems='center' p={3}>
@@ -64,7 +55,7 @@ export const DefaultLayout = ({ image }) => (
         </MediaQuery>
       </Item>
       <Item>
-        <Button fontColor='white' fontSize={[0, 2, 3]} variant='contrast'>
+        <Button p={1} fontColor='white' fontSize={[0, 2, 3]} variant='contrast'>
           Subscribe
         </Button>
       </Item>

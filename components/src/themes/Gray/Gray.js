@@ -58,13 +58,18 @@ const theme = {
       tablet: breakpoints[1],
       phone: breakpoints[0]
     }
+  },
+  transitions: {
+    short: 'all 0.3s ease-out',
+    medium: 'all 0.6s easeout',
+    long: 'all 0.9s ease-out'
   }
 };
 
 const defaults = {
   button: {
-    padding: `${theme.space[2] / 16}em ${(theme.space[3] + 4) / 16}em`,
-    border: theme.borders[3],
+    padding: `${theme.space[1] / 32}em ${(theme.space[3] + 3) / 16}em`,
+    border: theme.borders[2],
     textTransform: 'uppercase',
     letterSpacing: theme.letterSpacings.tracked
   },
@@ -121,6 +126,14 @@ const variants = {
     },
     contrast: {
       color: theme.colors.primary.contrastText
+    }
+  },
+  mastheadDrawer: {
+    primary: {
+      background: theme.colors.primary.main
+    },
+    contrast: {
+      background: theme.colors.primary.contrastText
     }
   }
 };
