@@ -7,12 +7,15 @@ const images = {
   mastheadImage
 };
 
+const breakpoints = [576, 768, 900];
+
 const icons = {
   Menu: <Menu />,
   Search: <Search />
 };
 
 const theme = {
+  breakpoints: [...breakpoints],
   space: [0, 4, 8, 16, 32, 128, 256, 512],
   lineHeights: {
     solid: 1,
@@ -48,20 +51,35 @@ const theme = {
       disabled: 'hsl(208, 13%, 75%)',
       hint: 'hsl(208, 13%, 75%)'
     }
+  },
+  media: {
+    sizes: {
+      desktop: breakpoints[2],
+      tablet: breakpoints[1],
+      phone: breakpoints[0]
+    }
+  },
+  transitions: {
+    short: 'all 0.3s ease-out',
+    medium: 'all 0.6s easeout',
+    long: 'all 0.9s ease-out'
   }
 };
 
 const defaults = {
   button: {
-    padding: `${theme.space[2] / 16}em ${(theme.space[3] + 4) / 16}em`,
-    border: theme.borders[3],
+    padding: `${theme.space[1] / 32}em ${(theme.space[3] + 3) / 16}em`,
+    border: theme.borders[2],
     textTransform: 'uppercase',
     letterSpacing: theme.letterSpacings.tracked
+  },
+  link: {
+    textDecoration: 'none'
   },
   masthead: {
     height: '100%',
     width: '100%',
-    background: theme.colors.primary.main,
+    background: theme.colors.primary.light,
     borderBottom: theme.borders[1],
     borderColor: darken(0.1, theme.colors.primary.main)
   },
@@ -74,8 +92,9 @@ const variants = {
   button: {
     primary: {
       ...defaults.button,
-      color: theme.colors.primary.main,
-      borderColor: theme.colors.primary.main
+      color: theme.colors.primary.dark,
+      borderColor: theme.colors.primary.main,
+      background: theme.colors.primary.contrastText
     },
     contrast: {
       ...defaults.button,
@@ -91,12 +110,30 @@ const variants = {
       color: theme.colors.primary.contrastText
     }
   },
+  link: {
+    primary: {
+      ...defaults.link,
+      color: theme.colors.primary.main
+    },
+    contrast: {
+      ...defaults.link,
+      color: theme.colors.primary.contrastText
+    }
+  },
   linkButton: {
     primary: {
       color: theme.colors.primary.main
     },
     contrast: {
       color: theme.colors.primary.contrastText
+    }
+  },
+  mastheadDrawer: {
+    primary: {
+      background: theme.colors.primary.main
+    },
+    contrast: {
+      background: theme.colors.primary.contrastText
     }
   }
 };
