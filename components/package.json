@@ -7,8 +7,11 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "bit": "^1.0.20",
+    "flow-remove-types": "^1.2.3",
+    "flow-typed": "^2.5.1",
     "gatsby": "^2.1.19",
     "gatsby-image": "^2.0.30",
+    "gatsby-plugin-flow": "^1.0.4",
     "gatsby-plugin-google-fonts": "0.0.4",
     "gatsby-plugin-manifest": "^2.0.20",
     "gatsby-plugin-offline": "^2.0.24",
@@ -35,7 +38,8 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "flow": "flow"
   },
   "repository": {
     "type": "git",
@@ -43,5 +47,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.96.0"
   }
 }
