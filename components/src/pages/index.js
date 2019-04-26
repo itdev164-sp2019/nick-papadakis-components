@@ -7,6 +7,7 @@ import SEO from '../gatsby-components/seo';
 import { Button, IconButton, Section, Main } from '../components/Element';
 import { Card } from 'rebass';
 import { Search } from 'styled-icons/feather';
+import { ShareButtonList } from '../components/SocialShareButton';
 
 const IndexPage = () => (
   <Layout>
@@ -53,7 +54,12 @@ const IndexPage = () => (
         This is Marilyn
       </Link>
     </Main>
-
+    <ShareButtonList
+      addThisPubId='ra-5cc202bf18f8059e'
+      contentTitle='fake title'
+      contentImage='http://placekitten.com/g/300/700'
+      contentDescription='Heres sharebuttons.'
+    />
     <Section flex justifyContent='space-evenly' p={4}>
       <Link to='/page-2'>
         <Button varient='primary' width={1}>
